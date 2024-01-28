@@ -1,5 +1,5 @@
 <p>
-  <img width="100%" src="https://assets.solidjs.com/banner?type=@solid-hooks/atom&background=tiles&project=%20" alt="@solid-hooks/atom">
+  <img width="100%" src="https://assets.solidjs.com/banner?type=@solid-hooks/dollar&background=tiles&project=%20" alt="@solid-hooks/dollar">
 </p>
 
 # @solid-hooks/dollar
@@ -9,13 +9,13 @@ object style solid.js primitives
 ## Install
 
 ```shell
-npm i @solid-hooks/atom
+npm i @solid-hooks/dollar
 ```
 ```shell
-yarn add @solid-hooks/atom
+yarn add @solid-hooks/dollar
 ```
 ```shell
-pnpm add @solid-hooks/atom
+pnpm add @solid-hooks/dollar
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ pnpm add @solid-hooks/atom
 object wrapper for `createSignal`
 
 ```ts
-import { $ } from '@solid-hooks/atom'
+import { $ } from '@solid-hooks/dollar'
 
 const data = $(0)
 
@@ -42,7 +42,7 @@ console.log(data.$set(1)) // set value
 object wrapper for `createMemo`
 
 ```ts
-import { $, $memo } from '@solid-hooks/atom'
+import { $, $memo } from '@solid-hooks/dollar'
 
 const test = $('test')
 const memo = $memo(() => `value: ${test()}`, { value: 'test' })
@@ -53,7 +53,7 @@ const memo = $memo(() => `value: ${test()}`, { value: 'test' })
 object wrapper for `createStore`
 
 ```ts
-import { $store } from '@solid-hooks/atom'
+import { $store } from '@solid-hooks/dollar'
 
 const store = $store({ test: { deep: 1 } })
 
@@ -66,7 +66,7 @@ store.$set('test', 'deep', 2) // set value
 object wrapper for `createResource`
 
 ```ts
-import { $, $resource } from '@solid-hooks/atom'
+import { $, $resource } from '@solid-hooks/dollar'
 
 const fetcher = (source: string) => Promise.resolve(`${source} data`)
 const source = $('source')
@@ -110,7 +110,7 @@ object wrapper for `createSelector`
 
 ```tsx
 import { For } from 'solid-js'
-import { $selector } from '@solid-hooks/atom'
+import { $selector } from '@solid-hooks/dollar'
 
 const activeId = $selector(0)
 activeId.$set(1)
